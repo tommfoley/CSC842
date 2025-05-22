@@ -1,8 +1,8 @@
-<h1>DPS</h1>
+<h1>Discovery Protocol Sniffer</h1>
 
 <h1>Overview</h1>
 <hr />
-<p>DPS, Discovery Protocol Sniffer, is designed to easily gather and parse LLDP or CDP packets allowing the user to focus on other tasks.</p>
+<p>Discovery Protocol Sniffer, DPS, is designed to easily gather and parse LLDP or CDP packets allowing the user to focus on other tasks.</p>
 <p>Information parsed by DPS includes, but is not limited to, MAC addresses, IP addresses, Device Names/IDs, Device capabilities, and VLAN(s).</p>
 <p>It was written in Python 3.10.12 and has been tested on Linux</p>
 
