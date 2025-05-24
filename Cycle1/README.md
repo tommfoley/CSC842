@@ -21,5 +21,5 @@
 <hr />
 <ul>
 <li>Combine LLDP and CDP sniffing so the user does not have to specify which type of packet they would like to sniff.</li>
-<li>Create a dictionary of discovered devices so the user is not duplicate results.</li>
+<li>Create a dictionary of discovered devices so the user is not shown duplicate results.</li>
 </ul>
