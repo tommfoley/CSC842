@@ -5,7 +5,7 @@ FTG Simulator is a firewall configuration simulator designed to help teach/learn
 
 FTG Simulator gets its name from the underlying architecture of how students create objects, policies, and the formatting of the config file itself, which are all based on Fortinet FortiGate firewalls.The output of this tool is aligned closely enough with Fortigate configuration so that students can copy and paste their config files directly from this tool into a Fortigate, allowing for consistency in learning across more advanced and robust lab environments.
 
-This tool was written in Python 3.10.12 and has been tested on Linux.
+This tool was written in Python 3.10.12 and has been tested on Linux and Windows 11.
 
 ## Dependencies
 * Python 3
