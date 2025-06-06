@@ -152,7 +152,7 @@ def append_firewall_policy_items(filename):
 def ensure_config_file_exists():
     global config_file
     filename = input("Enter the full name of the config file (including .conf extension): ") or getpass.getuser()+"_config.conf"
-    if not os.path.exists(config_file):
+    if not os.path.exists(filename):
         with open(filename, 'w') as file:
             file.write("config firewall address\nend\n\nconfig firewall policy\nend")
         config_file = filename
