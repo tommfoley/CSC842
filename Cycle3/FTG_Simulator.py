@@ -205,9 +205,11 @@ def main():
         if choice == 0:
             print("Exiting...")
             break
-
+        #
+        # If user chooses to define or create config file
+        #
         elif choice == 1:
-            print("Entering Object Creator Tool...")
+            print("Checking/Creating config file...")
             try:
                 ensure_config_file_exists()
             except PermissionError:
@@ -221,14 +223,13 @@ def main():
                 print(f"An error occurred: {e}\
                 \n----------------------------------------------")
                 sys.exit(1)
-
+        #
+        # If user chooses to create address object
+        #
         elif choice == 2:
             print("Entering Object Creator Tool...")
-            """Capture LLDP packets on the specified interface."""
             try:
-                # Sniff LLDP packets (Ether type 0x88cc)
                 append_firewall_address_items(config_file)
-
             except PermissionError:
                 print("There was a permission issue accessing the config file.\
                 \n----------------------------------------------")
@@ -240,14 +241,14 @@ def main():
                 print(f"An error occurred: {e}\
                 \n----------------------------------------------")
                 sys.exit(1)
+        #
+        # If user chooses to create policy object
+        #
+
         elif choice == 3:
             print("Entering Policy Creator Tool...")
-            # Add code for option 2 here
-            """Capture CDP packets on the specified interface."""
             try:
-                # Sniff CDP packets (Ether type 0x2000)
                 append_firewall_policy_items(config_file)
-
             except PermissionError:
                 print("There was a permission issue accessing the config file.\
                 \n----------------------------------------------")
