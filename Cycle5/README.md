@@ -1,6 +1,6 @@
-#FTG Grader
+# FTG Grader
 
-##Overview
+## Overview
 
 FTG Grader is a tool that is designed to be used in conjunction with the firewall configuration simulator (FTG Simulator). This tool will take student config files and an answer key and grade them for the instructor. 
 
@@ -8,10 +8,10 @@ This tool will run in silent mode by default to speed up the grading process or 
 
 This tool was written in Python 3.10.12 and has been tested on Linux.
 
-##Dependencies
+## Dependencies
 * Python 3
 
-##Folder Structure
+## Folder Structure
 
 ```
 project_root/
@@ -22,7 +22,7 @@ project_root/
 
 ```
 
-##To Execute (Non-Interactive)
+## To Execute (Non-Interactive)
 
 Simply run the Python file. 
 
@@ -30,7 +30,7 @@ Simply run the Python file.
 python3 FTG_Grader.py
 ```
 
-##To Execute (Interactive)
+## To Execute (Interactive)
 
 Simply run the Python file. 
 
@@ -40,6 +40,6 @@ python3 FTG_Grader.py -i
 
 ```
 
-##Future Work
+## Future Work
 * Create a GUI or web interface.
 * If an 'edit' block is misspelled, the program reports it as missing rather than a mismatch.
