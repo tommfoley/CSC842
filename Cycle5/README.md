@@ -43,4 +43,5 @@ python3 FTG_Grader.py -i
 ## Future Work
 * Create a GUI or web interface.
 * If an 'edit' block is misspelled, the program reports it as missing rather than a mismatch.
+* Address object's subnet that are a partial match are reported as a mismatch. 
 * Grade values are not written to the student report files. (Possible FERPA Issue)
