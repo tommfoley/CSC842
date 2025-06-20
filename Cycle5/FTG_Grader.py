@@ -78,8 +78,8 @@ def compare_dictionaries(student, answer, path=""):
 
         # String comparisons
         if isinstance(answer[key], str) and isinstance(student[key], str):
-            print ("Comparing: " + answer[key] + student[key])
-        # If the answers are identical, nothing to do
+
+            # If the answers are identical, nothing to do
             if answer[key] == student[key]:
                 pass
             # If answer is in student, possible a partial
