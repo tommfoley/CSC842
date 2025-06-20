@@ -78,14 +78,15 @@ def compare_dictionaries(student, answer, path=""):
 
         # String comparisons
         if isinstance(answer[key], str) and isinstance(student[key], str):
-            # If the answers are identical, nothing to do
-            if answer[key].lower() == student[key].lower():
+            print ("Comparing: " + answer[key] + student[key])
+        # If the answers are identical, nothing to do
+            if answer[key] == student[key]:
                 pass
             # If answer is in student, possible a partial
-            elif answer[key].lower() in student[key].lower():
+            elif answer[key] in student[key]:
                 differences.append((path + "/" + key, "Partial", answer[key], student[key]))
             # Same as above, but strip quotes to compare inner strings
-            elif answer[key].lower().strip('"') in student[key].lower().strip('"'):
+            elif answer[key].strip('"') in student[key].strip('"'):
                 differences.append((path + "/" + key, "Partial", answer[key], student[key]))
             # At this point the answers don't match
             elif student[key] != answer[key]:
@@ -105,7 +106,7 @@ def compare_dictionaries(student, answer, path=""):
             differences.append((path + "/" + key, "Extra", "", student[key]))
 
     return differences
-
+    
 #
 # Generates CSV report for each student from the differences list generatd by the compare function.
 #
