@@ -65,6 +65,6 @@ Evidence:
 * Time to analyze 1.8GB pcap :: 22m
 
 ## Future Work
-* Possible multithreading implementation to increase run performance.    
+* Possible multithreading implementation to increase run performance.
+* Ability to export/import report data.   
 * Adding additional fingerprinting techniques and more robust signatures/dictionaries.    
-* Ability to export/import report data.
