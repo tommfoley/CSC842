@@ -253,7 +253,7 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python fingerprint.py capture.pcap
+  python NetFingerprinter.py capture.pcap
         """
     )
 
