@@ -18,7 +18,7 @@ project_root/
 ├── NetFingerprinter.py
 ├── tcp_ports.txt
 ├── udp_ports.txt
-└── mac-vendors.txt
+└── mac_vendors.txt
 
 ```
 
