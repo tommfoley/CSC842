@@ -71,7 +71,7 @@ class OSFingerprinter:
         }
 
         # OUI Database Patterns; loaded from text file
-        with open('mac-vendors.txt') as f:
+        with open('mac_vendors.txt') as f:
             vendor_data = f.read()
         self.oui_database = ast.literal_eval(vendor_data)
 
