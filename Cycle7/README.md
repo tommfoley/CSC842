@@ -2,7 +2,7 @@
 
 ## Overview
 
-Fingerprinter is a program that will analyze packet capture files and try to extract and summarize source node information, including the operating system of the source node. The program tries to meet the needs of network analysts who would normally have to sort through packet data manually to find relevant information, including window size, TTL, or user agent strings.
+NetFingerprinter is a program that will analyze packet capture files and try to extract and summarize source node information, including the operating system of the source node. The program tries to meet the needs of network analysts who would normally have to sort through packet data manually to find relevant information, including window size, TTL, or user agent strings.
 
 This tool was written in Python 3.10.12 and has been tested on Linux.
 
@@ -15,7 +15,7 @@ This tool was written in Python 3.10.12 and has been tested on Linux.
 ```
 project_root/
 ├── OSFingerprinter.py
-├── fingerprint.py
+├── NetFingerprinter.py
 ├── tcp_ports.txt
 ├── udp_ports.txt
 └── mac-vendors.txt
@@ -27,7 +27,7 @@ project_root/
 Simply run the Python file.
 
 ```bash
-python3 fingerprint.py exampleCapture.pcap
+python3 NetFingerprinter.py exampleCapture.pcap
 ```
 ## Sample Output
 
