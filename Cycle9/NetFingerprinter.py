@@ -105,13 +105,13 @@ class NetFingerprinter:
     #
 
     def generate_os_profile(self, ip_data, fingerprinter):
+        global config
         profile = {
             'confidence': 0,
             'primary_os': 'Unknown',
             'possible_os': [],
             'evidence': []
         }
-
         os_votes = Counter()
 
         # Analyze TTL patterns
@@ -125,7 +125,7 @@ class NetFingerprinter:
             if ttl_range in fingerprinter.ttl_signatures:
                 possible_os = fingerprinter.ttl_signatures[ttl_range]
                 for os in possible_os:
-                    os_votes[os] += 2
+                    os_votes[os] += config['TTL_Weight']
                 profile['evidence'].append(f"TTL: {most_common_ttl} (range: {ttl_range})")
 
         # Analyze window sizes
@@ -138,14 +138,14 @@ class NetFingerprinter:
             if most_common_window in fingerprinter.tcp_window_signatures:
                 possible_os = fingerprinter.tcp_window_signatures[most_common_window]
                 for os in possible_os:
-                    os_votes[os] += 3
+                    os_votes[os] += config['Window_Size']
                 profile['evidence'].append(f"TCP Window: {most_common_window}")
 
         # Analyze User-Agent strings
         if ip_data['user_agents']:
             for ua_info in ip_data['user_agents']:
                 if ua_info['detected_os'] != 'Unknown':
-                    os_votes[ua_info['detected_os']] += 5
+                    os_votes[ua_info['detected_os']] += config['User_Agent']
                     if not (ua_info['detected_os']) in profile['evidence']:
                         profile['evidence'].append(f"User-Agent: {ua_info['detected_os']}")
 

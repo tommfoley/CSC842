@@ -9,13 +9,11 @@ and operating system.
 ################
 import ast, requests, urllib.parse
 
-
 #################
 ###   Class   ###
 #################
 class OSFingerprinter:
-    def __init__(self):
-
+    def __init__(self, config):
         ####################
         ### Dictionaries ###
         ####################
@@ -65,16 +63,16 @@ class OSFingerprinter:
         }
 
         # OUI Database Patterns; loaded from text file
-        with open('mac_vendors.txt') as f:
+        with open(config['OUI_Database']) as f:
             vendor_data = f.read()
         self.oui_database = ast.literal_eval(vendor_data)
 
         # Common well-known ports
-        with open('tcp_ports.txt') as f:
+        with open(config['TCP_Ports']) as f:
             tcp_port_data = f.read()
         self.tcp_ports = ast.literal_eval(tcp_port_data)
 
-        with open('udp_ports.txt') as f:
+        with open(config['UDP_Ports']) as f:
             udp_port_data = f.read()
         self.udp_ports = ast.literal_eval(udp_port_data)
 
