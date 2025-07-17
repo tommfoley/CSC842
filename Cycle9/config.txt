@@ -1,0 +1,9 @@
+#Local Databases
+OUI_Database=mac_vendors.txt
+TCP_Ports=tcp_ports.txt
+UDP_Ports=udp_ports.txt
+
+#OS Profile Weights
+TTL_Weight=2
+Window_Size=3
+User_Agent=5
