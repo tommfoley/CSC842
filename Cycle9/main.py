@@ -252,7 +252,7 @@ def main():
     nf.ip_profiles = merged
 
     # Print analysis for user
-    nf.print_os_analysis(nf, os_fp)
+    nf.print_os_analysis(nf, os_fp, config)
 
 if __name__ == "__main__":
     main()

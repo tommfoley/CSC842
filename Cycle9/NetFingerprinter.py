@@ -104,8 +104,7 @@ class NetFingerprinter:
     # Generates OS profile based on collected information.
     #
 
-    def generate_os_profile(self, ip_data, fingerprinter):
-        global config
+    def generate_os_profile(self, ip_data, fingerprinter, config):
         profile = {
             'confidence': 0,
             'primary_os': 'Unknown',
@@ -165,7 +164,7 @@ class NetFingerprinter:
     #
     # Print our analysis for the user
     #
-    def print_os_analysis(self, ip_profiles, fingerprinter):
+    def print_os_analysis(self, ip_profiles, fingerprinter, config):
         print("\n" + "="*80)
         print("OS Detection and Profiling Results")
         print("="*80)
@@ -190,7 +189,7 @@ class NetFingerprinter:
 
 
             # Generate OS profile
-            os_profile = self.generate_os_profile(data, fingerprinter)
+            os_profile = self.generate_os_profile(data, fingerprinter, config)
 
             #Print protocol summary information
             print(f"\n   Packet Count: {data['packet_count']}")
