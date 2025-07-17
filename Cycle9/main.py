@@ -94,7 +94,7 @@ def make_profile():
 # information.
 #
 def packet_consumer(packet_queue, result_queue):
-    os_fp = OSFingerprinter.OSFingerprinter()
+    os_fp = OSFingerprinter.OSFingerprinter(config)
     nf = NetFingerprinter.NetFingerprinter()
     profiles = defaultdict(make_profile)
 
@@ -243,7 +243,7 @@ def main():
     merged = merge_profiles(all_profiles)
 
     # Initiate OSFingerprinter
-    os_fp = OSFingerprinter.OSFingerprinter()
+    os_fp = OSFingerprinter.OSFingerprinter(config)
 
     # Initiate NetFingerprinter
     nf = NetFingerprinter.NetFingerprinter()
